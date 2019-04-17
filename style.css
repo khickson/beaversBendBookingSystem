@@ -1,0 +1,597 @@
+body {
+    background: black;
+    font-family: 'Raleway', sans-serif;
+}
+
+header {
+    background: black;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    max-width: 100%;
+}
+
+nav {
+    background: #f4f4f4;
+    display: flex;
+    display: -webkit-flex;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: .5rem;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-family: 'Nunito', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    color: #2b7a78;
+    font-weight: bold;
+}
+
+main {
+    background: #f4f4f4;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main h1 {
+    color: #2b7a78;
+}
+
+footer {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    max-width: 80%;
+    background: #f4f4f4;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: .5rem;
+}
+
+.cabinContainer {
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    max-width: 65%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.cabinName {
+    color: #2b7a78;
+    display: flex;
+    display: -webkit-flex;
+    font-family: 'Nunito', sans-serif;
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.information {
+    color: #3aafa9;
+    padding-bottom: 1rem;
+}
+
+.description a {
+    color: #3aafa9;
+}
+
+.formContainer {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: space-between;
+}
+
+.formContainer h2 {
+    display: flex;
+    display: -webkit-flex;
+    color: #2b7a78;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.formContainer .label {
+    display: inline-flex;
+    display: -webkit-inline-flex;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 1rem;
+}
+
+.formContainer .field {
+    display: inline-flex;
+    display: -webkit-inline-flex;
+    margin-top: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.formContainer .field input {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 10rem;
+    border-radius: 4px;
+    border: 1px solid #d1d1d1;
+    box-shadow: inset 1px 2px 8px rgba(0, 0, 0, 0.07);
+    font-family: inherit;
+    font-size: 1em;
+    line-height: 1.45;
+    outline: none;
+    padding: .5rem;
+    -webkit-transition: .18s ease-out;
+    -moz-transition: .18s ease-out;
+    -o-transition: .18s ease-out;
+    transition: .18s ease-out;
+}
+
+.formContainer .field select {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 7rem;
+    border-radius: 4px;
+    border: 1px solid #d1d1d1;
+    box-shadow: inset 1px 2px 8px rgba(0, 0, 0, 0.07);
+    font-family: inherit;
+    font-size: 1em;
+    line-height: 1.45;
+    outline: none;
+    padding: .5rem;
+    -webkit-transition: .18s ease-out;
+    -moz-transition: .18s ease-out;
+    -o-transition: .18s ease-out;
+    transition: .18s ease-out;
+}
+
+.formContainer .btn {
+    padding: 1em 3em;
+    cursor: pointer;
+    border-radius: 25px;
+    box-shadow: inset 0 -3px 0 rgba (0, 0, 0, .8);
+    background: #c2b9b0;
+    font-family: inherit;
+    font-weight: bold;
+}
+
+.formContainer .field input:hover,
+.formContainer .field select:hover {
+    box-shadow: inset 1px 2px 8px rgba (0, 0, 0, 0.02);
+}
+
+.formContainer .field input:focus,
+.formContainer .field select:focus {
+    color: #4b515d;
+    border: 1px solid #B8B6B6;
+    box-shadow: inset 1px 2px 4px rgba (0, 0, 0, 0.01), 0px 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Carousel Styling */
+.carousel {
+    position: relative;
+    width: 400px;
+    border: 10px solid white;
+    margin: 20px auto;
+    box-shadow: 0px 0px 40px #000;
+}
+
+.carousel > img {
+    display: none;
+    width: 100%;
+}
+
+.carousel > input {
+    position: absolute;
+    left: -9999px;
+}
+
+.carousel > input:checked + label + img {
+    display: block;
+}
+
+.carousel > label,
+.carousel > input:checked ~ label ~ label ~ label ~ label {
+    display: none;
+}
+
+.carousel > input:checked + label {
+    display: block;
+    left: 0;
+}
+
+.carousel > input:checked ~ label ~ label ~ label {
+    display: block;
+    right: 0;
+}
+
+.carousel > label {
+    position: absolute;
+    top: 0;
+    width: 25%;
+    height: 100%;
+    visibility: hidden;
+}
+
+.carousel > label:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+}
+
+.carousel > label:after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: 25px;
+    height: 25px;
+    line-height: 22px;
+    margin: -15px 10px 0 10px;
+    background-color: black;
+    color: white;
+    font-family: 'Arial';
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    visibility: hidden;
+    border: 2px solid white;
+    border-radius: 20px;
+    box-shadow: 0 3px 4px black;
+}
+
+.carousel > label:hover:after {
+    visibility: visible;
+}
+
+.carousel > input:checked + label:after {
+    left: 0;
+    content: '\00AB';
+}
+
+.carousel > input:checked ~ label ~ label ~ label:after {
+    right: 0;
+    content: '\00BB';
+}
+
+/* End Carousel Styling */
+
+/* Begin Description Page */
+.galleryContainer {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.galleryContainer h2,
+.galleryContainer h3 {
+    color: #2b7a78;
+}
+
+.carousel {
+    max-width: 45%;
+}
+
+.cabinInfo {
+    width: 50%;
+}
+
+.bookingForm {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.fullDetails {
+    width: 35%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.bookingForm .field {
+    display: inline-flex;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 45%;
+}
+
+.bookingForm .field input {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 5rem;
+    border-radius: 4px;
+    border: 1px solid #d1d1d1;
+    box-shadow: inset 1px 2px 8px rgba(0, 0, 0, 0.07);
+    font-family: inherit;
+    font-size: 1em;
+    line-height: 1.45;
+    outline: none;
+    padding: .5rem;
+    -webkit-transition: .18s ease-out;
+    -moz-transition: .18s ease-out;
+    -o-transition: .18s ease-out;
+    transition: .18s ease-out;
+}
+
+.bookingForm .fieldFull input {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+    border-radius: 4px;
+    border: 1px solid #d1d1d1;
+    box-shadow: inset 1px 2px 8px rgba(0, 0, 0, 0.07);
+    font-family: inherit;
+    font-size: 1em;
+    line-height: 1.45;
+    outline: none;
+    padding: .5rem;
+    -webkit-transition: .18s ease-out;
+    -moz-transition: .18s ease-out;
+    -o-transition: .18s ease-out;
+    transition: .18s ease-out;
+}
+
+.bookingForm .fieldFull textarea {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+    border-radius: 4px;
+    border: 1px solid #d1d1d1;
+    box-shadow: inset 1px 2px 8px rgba(0, 0, 0, 0.07);
+    font-family: inherit;
+    font-size: 1em;
+    line-height: 1.45;
+    outline: none;
+    padding: .5rem;
+    -webkit-transition: .18s ease-out;
+    -moz-transition: .18s ease-out;
+    -o-transition: .18s ease-out;
+    transition: .18s ease-out;
+}
+
+.bookingForm .btn {
+    display: block;
+    padding: 1em 3em;
+    cursor: pointer;
+    border-radius: 25px;
+    box-shadow: inset 0 -3px 0 rgba (0, 0, 0, .8);
+    background: #c2b9b0;
+    font-family: inherit;
+    font-weight: bold;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.bookingForm .field input:hover,
+.bookingForm .field textarea:hover {
+    box-shadow: inset 1px 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.bookingForm .field input:focus,
+.bookingForm .field textarea:focus {
+    color: #4b515d;
+    border: 1px solid #B8B6B6;
+    box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.01), 0px 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* End Description Page */
+
+/* Begin BackEnd Styling */
+
+.gridContainer {
+    display: grid;
+    grid-template-areas:
+        "headerRow headerRow headerRow"
+        "link section aside"
+        "footer footer footer";
+}
+
+.gridContainer .headerRow .numLg {
+    font-size: 2rem;
+}
+
+.gridContainer .headerRow {
+    display: block;
+    text-align: center;
+    border: 1px solid #000;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.gridContainer .links {
+    display: block;
+    text-align: center;
+    border-right: 1px solid #000;
+}
+
+.gridContainer .links .subNav {
+    list-style: none;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.gridContainer .links .subNav li a{
+    text-decoration: none;
+    color: #000;
+}
+
+.gridContainer .links .subNav li {
+    padding: 1rem;
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid #000;
+}
+
+.gridContainer .section {
+    border-right: 1px solid #000;
+}
+
+.gridContainer .section table {
+    margin: 0 auto;
+}
+
+.gridContainer .section h3 {
+    text-align: center;
+}
+
+.gridContainer .section table tr td {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.gridContainer .aside h3 {
+    text-align: center;
+}
+
+.gridContainer .aside table{
+    margin: 0 auto;
+}
+
+.gridContainer .aside table tr td ul {
+    list-style: none;
+}
+
+/* End BackEnd Styling */
+
+
+/* Properties BackEnd */
+.subPropForm{
+    display: block;
+    width: 100%;
+}
+
+.subPropForm .subPropBTN{
+display: block;
+    padding: 1em 3em;
+    cursor: pointer;
+    border-radius: 25px;
+    box-shadow: inset 0 -3px 0 rgba (0, 0, 0, .8);
+    background: #c2b9b0;
+    font-family: inherit;
+    font-weight: bold;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.PropForm{
+    display: block;
+}
+
+.PropForm h4, .section h4{
+    text-align: center;
+}
+
+.successImg{
+    display: flex;
+    max-width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.PropForm table tr td input{
+    padding: .5rem;
+    border-radius: 5%;
+    border: 1px solid #000;
+    margin: .5rem;
+}
+
+.PropForm table tr td textarea{
+    padding: .5rem;
+    border-radius: 5%;
+    border: 1px solid #000;
+    margin: .5rem;
+}
+
+.PropForm table tr td select{
+    padding: .5rem;
+    border-radius: 5%;
+    border: 1px solid #000;
+    margin: .5rem;
+}
+
+.subPropBTN{
+    display: block;
+    padding: 1em 3em;
+    cursor: pointer;
+    border-radius: 25px;
+    box-shadow: inset 0 -3px 0 rgba (0, 0, 0, .8);
+    background: #c2b9b0;
+    font-family: inherit;
+    font-weight: bold;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.BTN{
+    text-decoration: none;
+    font-family: inherit;
+    font-weight: bold;
+    color: #000;
+}
+
+#searchResults table{
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #000;
+}
+
+#searchResults table tr td{
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+#searchResults h4{
+    text-align: center;
+}
+
+#searchResults table tr td button{
+    border: none;
+    background: inherit;
+    padding: .5rem;
+    font-weight: bold;
+    font-family: inherit;
+}
+
+.flexboxContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.cabinList { border-collapse: collapse; width: 90%;}
+.cabinList tr th {background-color: #000; color: #fff; font-family: inherit; padding: 0.4rem;}
+.cabinList tr td {border: 1px solid #000; padding: 0.4rem;}
+.cabinList tr td a {text-decoration: none; color: #2b7a78;}
+
+.viewReserve{
+    list-style: none;
+    display: block;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+.viewReserve a{
+    text-decoration: none; color: #2b7a78;
+}
